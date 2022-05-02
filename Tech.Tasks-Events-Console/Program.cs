@@ -15,8 +15,8 @@ namespace Tech.Tasks_Events_Console
 
             while (true)
             {
-              
-                System.Threading.Thread.Sleep(1000);
+                Console.WriteLine($"{manager.queueTask1.q.Count} {manager.queueTask2.q.Count} {manager.queueTask3.q.Count} ");
+                System.Threading.Thread.Sleep(2000);
             }
 
         }

@@ -8,33 +8,23 @@ namespace Tech.Tasks_Events.Core
 {
     public class Manager
     {
+
         public void Run()
         {
 
-            CreateHTTPTask();
+            httpJob.CreateHTTPTask();
+
+            httpJob.HandlerNumberArrived += queueTask1.AddNewItem;
+            httpJob.HandlerNumberArrived += queueTask2.AddNewItem;
+            httpJob.HandlerNumberArrived += queueTask3.AddNewItem;
         }
-        public bool RunLoop = true;
-        public QueueTask queueTask = new QueueTask();
+
+        public HTTPJob httpJob = new HTTPJob();
+        public QueueTask queueTask1 = new QueueTask();
+        public QueueTask queueTask2 = new QueueTask() { Limit = 600 };    
+        public QueueTask queueTask3 = new QueueTask() { Limit = 900 };
 
 
-        public Task CreateHTTPTask()
-        {
-            return Task.Factory.StartNew(async () => { 
-                while(RunLoop)
-                {
-                    HTTP http = new HTTP();
-                    string str = await http.GetRandom();
 
-                    str = str.Replace("[", "").Replace("]", "");
-                    int num = Int32.Parse(str);
-
-                    QueueItem queueItem = new QueueItem(num);
-                    queueTask.q.Enqueue(queueItem);
-
-                    System.Threading.Thread.Sleep(10000);
-                }
-
-            });
-        }
     }
 }
