@@ -14,8 +14,8 @@ namespace Tech.Tasks_Events.Core
             CreateHTTPTask();
         }
         public bool RunLoop = true;
+        public QueueTask queueTask = new QueueTask();
 
-        public Queue<QueueItem> q = new Queue<QueueItem>();
 
         public Task CreateHTTPTask()
         {
@@ -29,7 +29,7 @@ namespace Tech.Tasks_Events.Core
                     int num = Int32.Parse(str);
 
                     QueueItem queueItem = new QueueItem(num);
-                    q.Enqueue(queueItem);
+                    queueTask.q.Enqueue(queueItem);
 
                     System.Threading.Thread.Sleep(10000);
                 }
