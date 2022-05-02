@@ -10,6 +10,8 @@ namespace Tech.Tasks_Events.Core
     {
         public bool RunLoop = true;
 
+        public delegate void delUpdate(QueueItem item);
+        public event delUpdate HandlerUpdate;   
         public delegate void delItem(QueueItem item);
         public event delItem HandlerNumberArrived;
         public Task CreateHTTPTask()
@@ -27,6 +29,12 @@ namespace Tech.Tasks_Events.Core
                     // queueTask.q.Enqueue(queueItem);
                     HandlerNumberArrived(queueItem);
                     // send event 
+
+                    // update UI
+                    // call event
+                    HandlerUpdate(queueItem);
+
+                    // Sleep
                     System.Threading.Thread.Sleep(5000);
                 }
 

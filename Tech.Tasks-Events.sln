@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tech.Tasks-Events-Console",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tech.Tasks-Events.Core", "Tech.Tasks-Events.Core\Tech.Tasks-Events.Core.csproj", "{F2927468-4231-41B4-9DB4-91299E1E445E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tech.Tasks-Events-UI", "Tech.Tasks-Events-UI\Tech.Tasks-Events-UI.csproj", "{A20F3B3A-9AEE-4D45-8166-408C95335E36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F2927468-4231-41B4-9DB4-91299E1E445E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2927468-4231-41B4-9DB4-91299E1E445E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2927468-4231-41B4-9DB4-91299E1E445E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A20F3B3A-9AEE-4D45-8166-408C95335E36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A20F3B3A-9AEE-4D45-8166-408C95335E36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A20F3B3A-9AEE-4D45-8166-408C95335E36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A20F3B3A-9AEE-4D45-8166-408C95335E36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
